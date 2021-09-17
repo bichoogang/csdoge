@@ -22,8 +22,8 @@ function AuthorProfile (props) {
         return (
             <div className="card no-hover text-center">
                 <div className="image-over">
-                    <div className="card-img-top" style={{height:'300px',display:'flex',justifyContent:'center'}}>
-                    <img  src={props.sendpic?props.sendpic:'https://gingermats.co.uk/wp-content/uploads/2013/10/600x6001.gif'} alt="" />
+                    <div className="card-img-top" style={{height:'300px',display:'flex',justifyContent:'center',alignItems:'center'}}>
+                    <img  src={props.sendpic?props.sendpic:'https://gingermats.co.uk/wp-content/uploads/2013/10/600x6001.gif'} className="selectimg" alt="" />
                     {/* Author */}
                     </div>
                     <div className="author">

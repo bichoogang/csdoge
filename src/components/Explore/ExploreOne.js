@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios';
+// import axios from 'axios';
 import Web3 from 'web3'
 import nft from '../../abi/nft.json'
 import { Link,useHistory } from 'react-router-dom';
 // import { useHistory } from 'react-router-dom'
-import { Button, Modal, Spinner } from 'react-bootstrap'
+import { Modal, Spinner } from 'react-bootstrap'
 
 
 import { addrs } from '../../abi/address'
@@ -14,27 +14,27 @@ import fromExponential from 'from-exponential'
 
 function ExploreOne({sale}) {
     const [list, setlist] = useState([])
-    const [list2, setlist2] = useState([])
+    // const [list2, setlist2] = useState([])
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const [newlist, setnewlist] = useState([])
 
     // const location = useLocation()
     const history = useHistory()
-    const [mainlist, setmainlist] = useState([])
-    const [mainlistauc, setmainlistauc] = useState([])
+    // const [mainlist, setmainlist] = useState([])
+    // const [mainlistauc, setmainlistauc] = useState([])
     const [arr, setArr] = useState([]);
-    const [arrauc, setArrauc] = useState([]);
+    // const [arrauc, setArrauc] = useState([]);
     const [price, setprice] = useState([])
     const [pricearr, setpricearr] = useState()
     const [payvalue, setpayvalue] = useState()
-    const [modaldatao, setmodaldatao] = useState()
-    const [modaldatac, setmodaldatac] = useState()
-    const [modaldatai, setmodaldatai] = useState()
-    const [modaldataaa, setmodaldataaa] = useState()
-    const [modaldatap, setmodaldatap] = useState()
-    const [modaldatacol, setmodaldatacol] = useState()
-    const [modaldatatok, setmodaldatatok] = useState()
+    // const [modaldatao, setmodaldatao] = useState()
+    // const [modaldatac, setmodaldatac] = useState()
+    // const [modaldatai, setmodaldatai] = useState()
+    // const [modaldataaa, setmodaldataaa] = useState()
+    // const [modaldatap, setmodaldatap] = useState()
+    // const [modaldatacol, setmodaldatacol] = useState()
+    // const [modaldatatok, setmodaldatatok] = useState()
     const [allfixed, setallfix] = useState([])
     const [allp, setallp] = useState([])
     const [spin, setspin] = useState()
@@ -305,7 +305,7 @@ function ExploreOne({sale}) {
 
 
     return (
-        <section className="explore-area">
+        <section className="explore-area exone">
             <div className="container-fuild">
                 <div className="row px-3">
                     <div className="col-12">

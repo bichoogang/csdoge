@@ -1,13 +1,13 @@
-import React, { Component, useEffect, useState } from 'react';
-import { NavLink, useParams, useLocation, useHistory } from 'react-router-dom';
+import React, {  useEffect, useState } from 'react';
+import {useLocation, useHistory } from 'react-router-dom';
 
 import Web3 from 'web3'
 import nft from '../../abi/nft.json'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import { addrs } from '../../abi/address'
 
-import { Button, Modal, Spinner } from 'react-bootstrap'
+import { Modal, Spinner } from 'react-bootstrap'
 import fromExponential from 'from-exponential';
 import ERC20 from '../../abi/ERC20.json'
 
@@ -17,19 +17,19 @@ function Csdetail() {
 
     const [buyprice, setbuyprice] = useState()
     const [buyaucprice, setaucbuyprice] = useState()
-    const [openbid, setopenbid] = useState()
+    // const [openbid, setopenbid] = useState()
     const [auch, setauch] = useState()
-    const [auctionprice, setauctionprice] = useState()
+    // const [auctionprice, setauctionprice] = useState()
     const [time, settime] = useState()
     const [accountid, setaccountid] = useState()
-    const [hour, sethour] = useState()
-    const [days, setdays] = useState()
-    const [saleval, setsaleval] = useState()
-    const [auctionval, setauctionvalue] = useState()
+    // const [hour, sethour] = useState()
+    // const [days, setdays] = useState()
+    // const [saleval, setsaleval] = useState()
+    // const [auctionval, setauctionvalue] = useState()
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
-    console.log('ssa', buyprice)
-    console.log('€auc ssa', auctionprice)
+    // console.log('ssa', buyprice)
+    // console.log('€auc ssa', auctionprice)
     const history = useHistory()
     const [cklist, setcklist] = useState()
     const [cspric, setcsprice] = useState()

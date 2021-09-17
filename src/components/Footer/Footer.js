@@ -30,7 +30,7 @@ class Footer extends Component {
                 <div className="footer-top">
                     <div className="container">
                         <div className="row">
-                            <div className="col-12 col-sm-6 col-lg-3 res-margin">
+                            <div className="col-12 col-sm-6 col-lg-3">
                                 {/* Footer Items */}
                                 <div className="footer-items">
                                     {/* Logo */}

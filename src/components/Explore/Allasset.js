@@ -81,7 +81,7 @@ function Allasset ({allnft}) {
     
         return (
             
-            <section className="explore-area">
+            <section className="explore-area allasset">
             <div className="container-fuild">
                 <div className="row px-3">
                     <div className="col-12">

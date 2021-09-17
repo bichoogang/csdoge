@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios';
+// import axios from 'axios';
 import Web3 from 'web3'
 import nft from '../../abi/nft.json'
 import { Link,useParams } from 'react-router-dom';
@@ -10,20 +10,20 @@ function ExploreTwo({ colid }) {
     const [colllist, setcolllist] = useState()
     // const [assetist, setassetlist] = useState()
     // const [allcolllist, allsetcolllist] = useState([])
-    const [active, setactive] = useState('sales')
+    // const [active, setactive] = useState('sales')
     const [alldata, setalldata] = useState([])
     const [show, setshow] = useState(false)
-    const [aldatafil, setaldatafil] = useState(alldata)
+    // const [aldatafil, setaldatafil] = useState(alldata)
     const [result, setresult] = useState([])
     const [resulta, setresulta] = useState([])
     const { word } = useParams()
-    console.log('aashie', word)
+    // console.log('aashie', word)
     const [assetist, setassetlist] = useState()
     const [allcolllist, allsetcolllist] = useState([])
-    const [allmaindata,setallmaindata] = useState()
-    const [subdata,setsubdata] = useState([])
-    const [subdata2,setsubdata2] = useState([])    
-    const [subdata3,setsubdata3] = useState([])
+    // const [allmaindata,setallmaindata] = useState()
+    // const [subdata,setsubdata] = useState([])
+    // const [subdata2,setsubdata2] = useState([])    
+    // const [subdata3,setsubdata3] = useState([])
     const [accountid,setaccountid] = useState()
     
     useEffect(async() => {

@@ -64,7 +64,7 @@ function ExploreTwo({ colid ,ckkid}) {
     }
 
     return (
-        <section className="popular-collections-area">
+        <section className="popular-collections-area mxpo">
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-12">

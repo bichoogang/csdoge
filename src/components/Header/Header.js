@@ -1,6 +1,40 @@
 import React from 'react';
 import logo from './logo.png'
+import Web3 from 'web3'
 const Header = () => {
+    const localprovide = 'http://localhost:3000'
+    const connetwallet = async () => {
+      
+
+        {
+
+            let web3; let ethereum = window.ethereum;
+            if (typeof window.web3 !== 'undefined') {
+                web3 = new Web3(window.web3.currentProvider);
+            } else {
+                 web3 = new Web3.providers.HttpProvider(localprovide);
+            }
+
+            // ethereum = new Web3(window.ethereum);
+            ethereum.enable().then(async (accounts) => {
+                // console.log('transfer called.........', accounts[0]);
+                localStorage.setItem('account', accounts[0]);
+            });
+            if (window.web3) {
+                // Subscription register
+                ethereum.on('accountsChanged', async (accounts) => {
+
+                    // Reload to avoid MetaMask bug: "MetaMask - RPC Error: Internal JSON-RPC"
+
+                    window.location.reload();
+
+                });
+                window.ethereum.on('networkChanged', async (network) => {
+                    window.location.reload();
+                });
+            }
+        }
+    }
     return (
         <header id="header">
             {/* Navbar */}
@@ -19,7 +53,7 @@ const Header = () => {
                         <li className="nav-item dropdown">
                             <a className="nav-link" href="/explore-1">Explore</a>
                         </li>
-                        
+
                         <li className="nav-item">
                             <a href="/create" className="nav-link">Create</a>
                         </li>
@@ -29,6 +63,9 @@ const Header = () => {
                         <li className="nav-item">
                             <a href="/csdoge" className="nav-link">CS DOGE</a>
                         </li>
+                        {/* <li className="nav-item">
+                            <button className="btn btn-bordered-white btn-smaller mt-0" onClick={connetwallet}>Connect Wallet</button>
+                        </li> */}
                         {/* <li className="nav-item dropdown">
                             <a className="nav-link" href="#">Community <i className="fas fa-angle-down ml-1" /></a>
                             <ul className="dropdown-menu">

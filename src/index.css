@@ -47,17 +47,21 @@
 }
 .mynft img{
     height: 290px;
+    object-fit: cover;
+
 }
 .mynft .mynftdes{
     display: flex!important;
 }
 
 .sale{
-    height: 250px;
+    height: 280px;
+    
     
 }
 .sale img{
-height: 250px;
+    height: 280px;
+    object-fit: contain;
 }
 .sale .saledetail{
     height: 100px;
@@ -66,19 +70,21 @@ height: 250px;
     transform: scaleY(-20px)!important;
 }
 .aucimg{
-    height: 250px;
-    width: 100%;
+    height: 270px;
+
     
 }
 .aucimg img{
-    height: 250px;
-    width: 100%;
+    height: 270px;
+    object-fit: cover;
 }
 .maincolimg{
-    height: 270px;
+    height: 280px;
 }
 .maincolimg img{
-    height: 270px;
+    height: 280px;
+    object-fit: cover;
+   
 }
 .cscard .card{
     padding: 0;
@@ -213,7 +219,7 @@ header{
 }
 .intro span{
     color: white;
-    font-size: 26px;
+    font-size: 23px;
     -webkit-text-fill-color:white;
 }
 .intro span::after{
@@ -262,5 +268,97 @@ header .navbar-sticky{
 }
 .activesale {
     border-bottom:3px solid #99B7FF!important;
+    
+}
+.footer-area .footer-top{
+    padding: 20px 0;
+}
+/* .main{
+    background-image: url(./components/images/b1.png);
+    background-position: lefts;
+} */
+
+.main{
+    background-image: url('./components//images/b11.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.mauction{
+    
+    /* background-color: red; */
+    /* background-image: url(./components/images/b9.png); */
+    /* background-attachment: initial;
+    background-size: 80% 80%; */
+    min-height: 60vh;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    
+}
+.collec{
+    min-height: 80vh;
+    /* background-image: url(./components/images/b9.png); */
+
+    background-attachment: initial;
+    
+   
+
+}
+.exone{
+    min-height: 80vh;
+    /* background-image: url(./components/images/b9.png); */
+    background-attachment: initial;
+    
+    background-position: center;
+    
+
+}
+.allasset{
+    min-height: 80vh;
+    /* background-image: url(./components/images/b9.png); */
+    background-attachment: initial;
+    background-position: center;
+    background-size: cover;
+
+}
+.author-area{
+    min-height: 80vh;
+    /* background-image: url(./components/images/b9.png); */
+    background-attachment: initial;
+    background-position: center;
+    background-size: cover;
+
+}
+.myexpl , .csdogemain{
+    min-height: 80vh;
+    /* background-image: url(./components/images/b9.png); */
+    background-attachment: initial;
+    background-position: center;
+    background-size: cover;
+
+}
+.item-details-area{
+    /* background-image: url(./components/images/b9.png); */
+    background-attachment: initial;
+    background-position: center;
+    background-size: 100% 40%;
+    background-repeat: no-repeat;
+    background-position:left bottom;
+}
+.mxpo{
+    /* background-image: url(./components/images/b9.png); */
+    background-attachment: initial;
+    background-position: center;
+    background-size: cover;
+  
+    background-position:center;
+
+}
+.selectimg{
+    height: fit-content!important;
+    max-height: 100%!important;
+   max-width: 100%!important;
+   width: auto!important;
     
 }

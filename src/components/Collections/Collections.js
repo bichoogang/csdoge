@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios';
+// import axios from 'axios';
 import Web3 from 'web3'
 import nft from '../../abi/nft.json'
 
 
 import {addrs} from '../../abi/address'
 import { Link } from 'react-router-dom';
-const BASE_URL = "https://my-json-server.typicode.com/themeland/netstorm-json/collections";
+// const BASE_URL = "https://my-json-server.typicode.com/themeland/netstorm-json/collections";
 
 function Collections () {
     const [colllist, setcolllist] = useState()
-    const [assetist, setassetlist] = useState()
-    const [allcolllist, allsetcolllist] = useState([])
+    // const [assetist, setassetlist] = useState()
+    // const [allcolllist, allsetcolllist] = useState([])
     const [active, setactive] = useState('sales')
     const [alldata, setalldata] = useState([])
     const [show, setshow] = useState(false)
-    const [aldatafil, setaldatafil] = useState(alldata)
-    const [result, setresult] = useState([])
+    // const [aldatafil, setaldatafil] = useState(alldata)
+    // const [result, setresult] = useState([])
     const [spi, setspin] = useState()
     const [accountid, setaccountid] = useState()
     // useEffect(()=>{
@@ -103,7 +103,7 @@ function Collections () {
     
         return (
             
-            <section className="popular-collections-area">
+            <section className="popular-collections-area collec">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12">

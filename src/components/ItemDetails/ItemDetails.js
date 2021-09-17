@@ -1,19 +1,24 @@
-import React, { Component, useEffect, useState } from 'react';
-import { NavLink, useParams, useLocation, useHistory } from 'react-router-dom';
+import React, {  useEffect, useState } from 'react';
+import {  useLocation, useHistory } from 'react-router-dom';
 
 import Web3 from 'web3'
 import nft from '../../abi/nft.json'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import { addrs } from '../../abi/address'
 
-import { Button, Modal, Spinner } from 'react-bootstrap'
+import { Modal, Spinner } from 'react-bootstrap'
 import ExploreFive from '../../components/Explore/ExploreTwo';
 import fromExponential from 'from-exponential';
 
 function ItemDetails() {
     const location = useLocation()
     const fdata = location.state
+    useEffect(()=>{
+        if(fdata){
+            window.scrollTo(0,0)
+        }
+    },[fdata])
 
     const [buyprice, setbuyprice] = useState()
     const [buyaucprice, setaucbuyprice] = useState()
@@ -38,7 +43,7 @@ function ItemDetails() {
         timer(fdata[0])
         const accounts1 = await window.ethereum.request({ method: 'eth_requestAccounts' });
         setaccountid(accounts1[0])
-    }, [])
+    }, [fdata])
     console.log('accoutid', accountid)
     const salenft = async (id) => {
         // console.log('2')

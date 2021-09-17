@@ -69,7 +69,7 @@ class Signup extends Component {
                                         <div className="form-group mt-3">
                                             <div className="form-check form-check-inline">
                                                 <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" defaultValue="option1" />
-                                                <label className="form-check-label" htmlFor="inlineRadio1">I agree to <a href="#">Privacy Policy</a></label>
+                                                {/* <label className="form-check-label" htmlFor="inlineRadio1">I agree to <a href="#">Privacy Policy</a></label> */}
                                             </div>
                                         </div>
                                     </div>

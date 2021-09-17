@@ -1,51 +1,51 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios';
+// import axios from 'axios';
 import Web3 from 'web3'
 import nft from '../../abi/nft.json'
 
 import { addrs, userid } from '../../abi/address'
 import { Link, NavLink } from 'react-router-dom';
 import ERC20 from '../../abi/ERC20.json'
-import { Button, Modal, Spinner, ProgressBar } from 'react-bootstrap'
+import { Modal, Spinner, ProgressBar } from 'react-bootstrap'
 import { IoIosAddCircle } from "react-icons/io";
 import fromExponential from 'from-exponential'
 
-const BASE_URL = "https://my-json-server.typicode.com/themeland/netstorm-json/collections";
+// const BASE_URL = "https://my-json-server.typicode.com/themeland/netstorm-json/collections";
 
 function Csdoge() {
     const [allfixed, setallfix] = useState([])
     const [allp, setallp] = useState([])
-    const [active, setactive] = useState('sales')
-    const [list, setlist] = useState([])
-    const [list2, setlist2] = useState([])
+    // const [active, setactive] = useState('sales')
+    // const [list, setlist] = useState([])
+    // const [list2, setlist2] = useState([])
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
-    const [newlist, setnewlist] = useState([])
-    const [modcopies, setmodcopies] = useState()
+    // const [newlist, setnewlist] = useState([])
+    // const [modcopies, setmodcopies] = useState()
 
 
 
     // const location = useLocation()
-    const [mainlist, setmainlist] = useState([])
+    // const [mainlist, setmainlist] = useState([])
     const [mainlistauc, setmainlistauc] = useState([])
-    const [arr, setArr] = useState([]);
-    const [arrauc, setArrauc] = useState([]);
-    const [price, setprice] = useState([])
+    // const [arr, setArr] = useState([]);
+    // const [arrauc, setArrauc] = useState([]);
+    // const [price, setprice] = useState([])
     const [pricelast, setpricelast] = useState([])
-    const [pricearr, setpricearr] = useState()
-    const [payvalue, setpayvalue] = useState()
-    const [modaldatao, setmodaldatao] = useState()
-    const [modaldatac, setmodaldatac] = useState()
-    const [modaldatai, setmodaldatai] = useState()
-    const [modaldataaa, setmodaldataaa] = useState()
-    const [modaldatap, setmodaldatap] = useState()
-    const [modaldatacol, setmodaldatacol] = useState()
-    const [modaldatatok, setmodaldatatok] = useState()
+    // const [pricearr, setpricearr] = useState()
+    // const [payvalue, setpayvalue] = useState()
+    // const [modaldatao, setmodaldatao] = useState()
+    // const [modaldatac, setmodaldatac] = useState()
+    // const [modaldatai, setmodaldatai] = useState()
+    // const [modaldataaa, setmodaldataaa] = useState()
+    // const [modaldatap, setmodaldatap] = useState()
+    // const [modaldatacol, setmodaldatacol] = useState()
+    // const [modaldatatok, setmodaldatatok] = useState()
     // const [allfixed, setallfix] = useState([])
     // const [allp, setallp] = useState([])
-    const [spin, setspin] = useState()
+    // const [spin, setspin] = useState()
     const [tokenid, settokenid] = useState()
-    const [allprice, setallprice] = useState()
+    // const [allprice, setallprice] = useState()
     const [cklist, setcklist] = useState([])
     const [accountid, setaccountid] = useState()
     const [burnc, setburnc] = useState()

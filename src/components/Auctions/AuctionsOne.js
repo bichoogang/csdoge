@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios';
+// import axios from 'axios';
 import Web3 from 'web3'
 import nft from '../../abi/nft.json'
 import { Link } from 'react-router-dom';
@@ -9,106 +9,106 @@ import { Link } from 'react-router-dom';
 import { addrs } from '../../abi/address'
 
 
-const initData = {
-    pre_heading: "Auctions",
-    heading: "Live Auctions",
-    btnText: "View All"
-}
+// const initData = {
+//     pre_heading: "Auctions",
+//     heading: "Live Auctions",
+//     btnText: "View All"
+// }
 
-const data = [
-    {
-        id: "1",
-        img: "/img/auction_1.jpg",
-        date: "2021-12-09",
-        title: "Virtual Worlds",
-        seller_thumb: "/img/avatar_1.jpg",
-        seller: "@Richard",
-        price: "1.5 BNB",
-        count: "1 of 1"
-    },
-    {
-        id: "2",
-        img: "/img/auction_2.jpg",
-        date: "2021-10-05",
-        title: "Collectibles",
-        seller_thumb: "/img/avatar_2.jpg",
-        seller: "@JohnDeo",
-        price: "2.7 BNB",
-        count: "1 of 1"
-    },
-    {
-        id: "3",
-        img: "/img/auction_3.jpg",
-        date: "2021-09-15",
-        title: "Arts",
-        seller_thumb: "/img/avatar_3.jpg",
-        seller: "@MKHblots",
-        price: "2.3 BNB",
-        count: "1 of 1"
-    },
-    {
-        id: "4",
-        img: "/img/auction_4.jpg",
-        date: "2021-12-29",
-        title: "Robotic Arts",
-        seller_thumb: "/img/avatar_4.jpg",
-        seller: "@RioArham",
-        price: "1.8 BNB",
-        count: "1 of 1"
-    },
-    {
-        id: "5",
-        img: "/img/auction_5.jpg",
-        date: "2022-01-24",
-        title: "Design Illusions",
-        seller_thumb: "/img/avatar_5.jpg",
-        seller: "@ArtNox",
-        price: "1.7 BNB",
-        count: "1 of 1"
-    },
-    {
-        id: "6",
-        img: "/img/auction_6.jpg",
-        date: "2022-03-30",
-        title: "Photography",
-        seller_thumb: "/img/avatar_6.jpg",
-        seller: "@Junaid",
-        price: "3.5 BNB",
-        count: "1 of 1"
-    }
-]
+// const data = [
+//     {
+//         id: "1",
+//         img: "/img/auction_1.jpg",
+//         date: "2021-12-09",
+//         title: "Virtual Worlds",
+//         seller_thumb: "/img/avatar_1.jpg",
+//         seller: "@Richard",
+//         price: "1.5 BNB",
+//         count: "1 of 1"
+//     },
+//     {
+//         id: "2",
+//         img: "/img/auction_2.jpg",
+//         date: "2021-10-05",
+//         title: "Collectibles",
+//         seller_thumb: "/img/avatar_2.jpg",
+//         seller: "@JohnDeo",
+//         price: "2.7 BNB",
+//         count: "1 of 1"
+//     },
+//     {
+//         id: "3",
+//         img: "/img/auction_3.jpg",
+//         date: "2021-09-15",
+//         title: "Arts",
+//         seller_thumb: "/img/avatar_3.jpg",
+//         seller: "@MKHblots",
+//         price: "2.3 BNB",
+//         count: "1 of 1"
+//     },
+//     {
+//         id: "4",
+//         img: "/img/auction_4.jpg",
+//         date: "2021-12-29",
+//         title: "Robotic Arts",
+//         seller_thumb: "/img/avatar_4.jpg",
+//         seller: "@RioArham",
+//         price: "1.8 BNB",
+//         count: "1 of 1"
+//     },
+//     {
+//         id: "5",
+//         img: "/img/auction_5.jpg",
+//         date: "2022-01-24",
+//         title: "Design Illusions",
+//         seller_thumb: "/img/avatar_5.jpg",
+//         seller: "@ArtNox",
+//         price: "1.7 BNB",
+//         count: "1 of 1"
+//     },
+//     {
+//         id: "6",
+//         img: "/img/auction_6.jpg",
+//         date: "2022-03-30",
+//         title: "Photography",
+//         seller_thumb: "/img/avatar_6.jpg",
+//         seller: "@Junaid",
+//         price: "3.5 BNB",
+//         count: "1 of 1"
+//     }
+// ]
 
 function AuctionsOne({auc}) {
-    const [active, setactive] = useState('auction')
+    // const [active, setactive] = useState('auction')
     const [list, setlist] = useState([])
-    const [list2, setlist2] = useState([])
+    // const [list2, setlist2] = useState([])
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
-    const [mainlist, setmainlist] = useState([])
-    const [mainlistauc, setmainlistauc] = useState([])
+    // const [mainlist, setmainlist] = useState([])
+    // const [mainlistauc, setmainlistauc] = useState([])
     const [arr, setArr] = useState([]);
-    const [arrauc, setArrauc] = useState([]);
-    const [price, setprice] = useState([])
+    // const [arrauc, setArrauc] = useState([]);
+    // const [price, setprice] = useState([])
     const [pricearr, setpricearr] = useState()
-    const [newlist, setnewlist] = useState([])
-    const [payvalue, setpayvalue] = useState()
-    const [highauc, sethighauc] = useState()
-    const [highauid, sethighauid] = useState()
-    const [modaldatao, setmodaldatao] = useState()
-    const [modaldatac, setmodaldatac] = useState()
-    const [modaldatai, setmodaldatai] = useState()
-    const [modaldataaa, setmodaldataaa] = useState()
-    const [modaldatap, setmodaldatap] = useState()
-    const [modaldatacol, setmodaldatacol] = useState()
-    const [modaldatatok, setmodaldatatok] = useState()
+    // const [newlist, setnewlist] = useState([])
+    // const [payvalue, setpayvalue] = useState()
+    // const [highauc, sethighauc] = useState()
+    // const [highauid, sethighauid] = useState()
+    // const [modaldatao, setmodaldatao] = useState()
+    // const [modaldatac, setmodaldatac] = useState()
+    // const [modaldatai, setmodaldatai] = useState()
+    // const [modaldataaa, setmodaldataaa] = useState()
+    // const [modaldatap, setmodaldatap] = useState()
+    // const [modaldatacol, setmodaldatacol] = useState()
+    // const [modaldatatok, setmodaldatatok] = useState()
     const [exprice, setexprice] = useState()
     const [allfixed, setallfix] = useState([])
     const [allp, setallp] = useState([])
     const [allhighp, setallhighp] = useState([])
     const [timew, settimew] = useState([])
-    const [p1, setp1] = useState()
-    const [p2, setp2] = useState()
-    const [tokenid, settokenid] = useState()
+    // const [p1, setp1] = useState()
+    // const [p2, setp2] = useState()
+    // const [tokenid, settokenid] = useState()
     const [colllist,setcolllist] = useState()
     const [alldata,setalldata] = useState([])
 
